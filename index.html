@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Todo list</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+
+</head>
+<body>
+        
+    <div class="main">
+        <input id="todo" type="text" placeholder="Intitulé de la formation">
+        <input type="button" onclick="Ajouter()" value="Ajouter">
+    </div>
+    <div id="todos" class="todos">
+        <ul id="todos-list">
+
+            <li class="item1" id="item1">
+                <div class="toggle-on"></div>
+                <p> DEUST MIPC </p>
+                <button class="edit" ><i class="fas fa-edit"></i></button>
+                <button id="delete" class="delete" ><i class="fas fa-trash-alt"></i></button>
+            </li>
+
+            <div style="display: none;" class="details" >
+                <p attr="detail-organisme"> organisme responsable : FST </p>
+                <p attr="detail-type"> type: diplome </p>
+                <p attr="detail-date"> Date de la fornation : 2020-2021 </p>
+                terminée ou en cours <input type="checkbox" checked="true">
+            </div>
+
+            <li class="item1">
+                <div class="toggle-on"></div>
+                <p> Licence en génie informatique </p>
+                <button class="edit" ></button>
+                <button class="delete" ><i class="fas fa-trash-alt"></i> </button>
+            </li>
+
+
+
+
+            <div class="details" >
+                <div>
+                    <p attr="detail-organisme"> Organisme responsable : FST </p> <input type="text" id="lorganisme" placeholder="modifier l'organisme">
+                </div>
+                <br>
+                <div>
+                    <p attr="detail-type"> type: diplôme </p> <input type="text" id="diplome" placeholder="modifier type diplôme">
+                </div>
+                <br>
+                <div>
+                    <p attr="detail-date"> Date de la fornation : 2021-2022 </p> <input type="text" id="date" placeholder="modifier la date">
+                </div>
+                <br>
+                <div>
+                    <p>Terminée ou en cours</p>  <input type="checkbox" checked="true">
+                </div>
+                <br> <br>
+                <input  onclick="Validate()" type="button" value="Valider les modifications">
+            </div>
+
+            <li class="item1">
+                <div class="toggle-off"></div>
+                <p> Master en génie informatique </p>
+                <button class="edit" ></button>
+                <button id="delete" class="delete" ></button>
+            </li>
+
+         
+
+            <div style="display: none;" class="details" >
+                <p attr="detail-organisme"> organisme responsable : FST </p>
+                <p attr="detail-type"> type: diplome </p>
+                <p attr="detail-date"> Date de la fornation : 2021-2022 </p>
+                <p attr="detail-date"> Date : 2021-2022 </p>
+                terminée ou en cours <input type="checkbox" checked="true">
+            </div>
+
+        </ul>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
